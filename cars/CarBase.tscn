@@ -37,7 +37,6 @@ scale = Vector2(0.1, 0.1)
 texture = SubResource("AtlasTexture_uo0pn")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(0.8, 0.8)
 
 [node name="Mount1" type="Marker2D" parent="."]
 position = Vector2(12, 8)

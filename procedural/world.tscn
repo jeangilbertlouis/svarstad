@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://de030nswktco"]
+
+[ext_resource type="TileSet" uid="uid://bkgktg8j5pc65" path="res://tilemaps/desert.tres" id="1_pdr1r"]
+[ext_resource type="Script" path="res://procedural/world.gd" id="2_6u16b"]
+
+[node name="world" type="TileMap"]
+tile_set = ExtResource("1_pdr1r")
+format = 2
+script = ExtResource("2_6u16b")

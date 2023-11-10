@@ -1,8 +1,9 @@
 extends CharacterBody2D
+class_name CarBase
 
 # car properties
 var wheel_base = 70  # Distance from front to rear wheel
-var steering_angle = 15  # Amount that front wheel turns, in degrees
+var steering_angle = 35  # Amount that front wheel turns, in degrees
 var engine_power = 900  # Forward acceleration force.
 
 var braking = -450
@@ -13,7 +14,7 @@ var friction = -55
 var drag = -0.06
 
 var slip_speed = 400  # Speed where traction is reduced
-var traction_fast = 2.5 # High-speed traction
+var traction_fast = 1.5 # High-speed traction
 var traction_slow = 10  # Low-speed traction
 
 # state

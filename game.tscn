@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://080wux56vudf"]
+
+[ext_resource type="Texture2D" uid="uid://cwme5pqxdbpu3" path="res://assets/placeholders/city.jpg" id="1_38bcu"]
+[ext_resource type="PackedScene" uid="uid://bs2lchgajhg0m" path="res://cars/CarBase.tscn" id="2_0bn3a"]
+[ext_resource type="PackedScene" uid="uid://dbp0tj82pughq" path="res://objects/Barrel.tscn" id="3_tlg54"]
+[ext_resource type="PackedScene" uid="uid://bngrwqu3b2wjt" path="res://powerups/Ammo.tscn" id="4_67qpe"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_38bcu")
+
+[node name="CarBase" parent="." instance=ExtResource("2_0bn3a")]
+
+[node name="Barrel" parent="." instance=ExtResource("3_tlg54")]
+position = Vector2(132, -92)
+
+[node name="Ammo" parent="." instance=ExtResource("4_67qpe")]
+position = Vector2(165, 79)

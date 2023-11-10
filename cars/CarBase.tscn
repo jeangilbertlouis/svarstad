@@ -9,7 +9,7 @@
 script = ExtResource("2_s600t")
 wheel_base = 30
 steering_angle = 15
-engine_power = 700
+engine_power = 900
 brake_power = 450
 friction = -55
 drag = -0.06

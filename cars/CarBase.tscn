@@ -22,3 +22,15 @@ scale = Vector2(0.1, 0.1)
 texture = SubResource("AtlasTexture_uo0pn")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Mount1" type="Marker2D" parent="."]
+position = Vector2(12, 8)
+rotation = 1.5708
+
+[node name="Mount2" type="Marker2D" parent="."]
+position = Vector2(12, -7)
+rotation = 1.5708
+
+[node name="Mount3" type="Marker2D" parent="."]
+position = Vector2(-5, 0)
+rotation = 1.5708

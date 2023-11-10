@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://bngrwqu3b2wjt"]
+
+[ext_resource type="Texture2D" uid="uid://vqlndd4qg511" path="res://assets/placeholders/ammo.jpg" id="1_f77mv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_elpfw"]
+radius = 19.0263
+
+[node name="Ammo" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_elpfw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_f77mv")

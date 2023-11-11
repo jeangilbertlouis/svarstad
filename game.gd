@@ -23,3 +23,7 @@ func _process(delta):
 
 func _on_ammo_body_entered(body):
 	print("Ammo")
+
+
+func _on_trophy_body_entered(body):
+	print("Trophy")

@@ -26,12 +26,13 @@ properties = ExtResource("5_ccv6p")
 
 [node name="ui" type="CanvasLayer" parent="."]
 
-[node name="hud" parent="ui" instance=ExtResource("6_tmeed")]
+[node name="hud" parent="ui" node_paths=PackedStringArray("player") instance=ExtResource("6_tmeed")]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+player = NodePath("../../CarBase")
 
 [node name="music" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_fonlr")

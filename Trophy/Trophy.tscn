@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwnbiakygp7lj"]
+
+[ext_resource type="Texture2D" uid="uid://c8x5sp47lc3eo" path="res://assets/placeholders/trophy.png" id="1_g2q2i"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ur0fo"]
+radius = 57.2713
+
+[node name="Trophy" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+texture = ExtResource("1_g2q2i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_ur0fo")

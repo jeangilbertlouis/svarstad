@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://bngrwqu3b2wjt"]
 
-[ext_resource type="Texture2D" uid="uid://vqlndd4qg511" path="res://assets/placeholders/ammo.jpg" id="1_f77mv"]
 [ext_resource type="Script" path="res://powerups/ammo.gd" id="1_qguk7"]
+[ext_resource type="Texture2D" uid="uid://cky2jf3b4k1l3" path="res://hud/ammo-rifle-alt 32px.png" id="2_dephs"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_elpfw"]
-radius = 19.0263
+radius = 16.0
 
 [node name="Ammo" type="Area2D"]
 collision_layer = 4
@@ -14,5 +14,4 @@ script = ExtResource("1_qguk7")
 shape = SubResource("CircleShape2D_elpfw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("1_f77mv")
+texture = ExtResource("2_dephs")

@@ -16,3 +16,6 @@ var max_speed_reverse = 250
 @export var slip_speed: int = 400  # Speed where traction is reduced
 @export var traction_fast: float = 2.5 # High-speed traction
 @export var traction_slow: float = 10  # Low-speed traction
+
+@export var collider: PackedVector2Array = []
+@export var texture: Texture2D = null

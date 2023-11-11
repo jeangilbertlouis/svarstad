@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://yhd5sark3ut"
-path="res://.godot/imported/texture.png-7acc5266fbc6d9a49b5aff6339cbc52a.ctex"
+path="res://.godot/imported/atlas.png-d001fe11b2771636aed16c67e7cd3930.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cars/car_base/texture.png"
-dest_files=["res://.godot/imported/texture.png-7acc5266fbc6d9a49b5aff6339cbc52a.ctex"]
+source_file="res://cars/car_base/atlas.png"
+dest_files=["res://.godot/imported/atlas.png-d001fe11b2771636aed16c67e7cd3930.ctex"]
 
 [params]
 

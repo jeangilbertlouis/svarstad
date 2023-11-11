@@ -1,7 +1,17 @@
 extends CharacterBody2D
 class_name CarBase
 
-@export var properties: CarProperties
+@export var properties: CarProperties = null :
+	get:
+		return properties
+	set(value):
+		properties = value
+		_set_properties(value)
+		
+func _set_properties(value: CarProperties) -> void:
+	if value != null and is_node_ready():
+		$Collider.polygon = value.collider
+		$Sprite.texture = value.texture
 
 # state
 var acceleration = Vector2.ZERO
@@ -9,10 +19,10 @@ var direction
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	_set_properties(properties)
 	
 func _process(_delta):
-	$Sprite2D.position = Vector2(properties.wheel_base / 2, 0)
+	$Sprite2D2.position = Vector2(properties.wheel_base / 2, 0)
 #	pass
 
 func _physics_process(delta):
@@ -24,6 +34,8 @@ func _physics_process(delta):
 	move_and_slide()
 
 func apply_friction(delta):
+	if properties == null:
+		return
 	if acceleration == Vector2.ZERO and velocity.length() < 50:
 		velocity = Vector2.ZERO
 
@@ -33,6 +45,8 @@ func apply_friction(delta):
 	acceleration += drag_force + friction_force
 
 func get_input():
+	if properties == null:
+		return
 	var turn = Input.get_axis("steer_left", "steer_right")
 	direction = turn * deg_to_rad(properties.steering_angle)
 	if Input.is_action_pressed("accelerate"):
@@ -41,6 +55,8 @@ func get_input():
 		acceleration = transform.x * -properties.brake_power
 
 func calculate_steering(delta):
+	if properties == null:
+		return
 	var rear_wheel = position - transform.x * properties.wheel_base / 2.0
 	var front_wheel = position + transform.x * properties.wheel_base / 2.0
 	

@@ -23,6 +23,7 @@ atlas = ExtResource("3_1w7kt")
 region = Rect2(0, 0, 234, 474)
 
 [node name="CarBase" type="CharacterBody2D"]
+collision_mask = 255
 script = ExtResource("1_0o6ky")
 properties = SubResource("Resource_pgnv5")
 

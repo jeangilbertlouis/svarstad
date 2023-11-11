@@ -14,6 +14,10 @@ config/name="EndDays"
 run/main_scene="res://game.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 
+[audio]
+
+buses/default_bus_layout="res://sound/sound_bus.tres"
+
 [display]
 
 window/size/viewport_width=1280

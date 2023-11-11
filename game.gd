@@ -28,5 +28,5 @@ func _on_ammo_body_entered(body):
 
 
 func _on_trophy_body_entered(body):
-	emit_signal("trophy_collected")
+	trophy_collected.emit()
 	print("Trophy")

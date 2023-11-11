@@ -56,6 +56,13 @@ stretch_mode = 4
 layout_mode = 2
 text = "100"
 
+[node name="game_win_box" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="game_won_label" type="RichTextLabel" parent="MarginContainer/game_win_box"]
+layout_mode = 2
+text = "Trophy collected!"
+
 [node name="MarginContainer2" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 2

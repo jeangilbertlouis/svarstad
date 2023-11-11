@@ -14,3 +14,8 @@ func _process(delta):
 	if player != null:
 		var velocity = player.velocity.length() / 6
 		$MarginContainer2/car_box/speed_box/speed_label.text = speed_text % velocity
+
+
+func _on_game_trophy_collected():
+	$MarginContainer/player_box/ammo_box/ammo_label.text = "Trophy!"
+	pass # Replace with function body.

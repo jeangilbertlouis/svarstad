@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="CarProperties" load_steps=3 format=3 uid="uid://dt6w5n3p2juns"]
+
+[ext_resource type="Script" path="res://cars/car_base/properties.gd" id="1_avr7k"]
+[ext_resource type="Texture2D" uid="uid://ce4do4wy5nim6" path="res://cars/racer/texture.tres" id="2_8fqt2"]
+
+[resource]
+script = ExtResource("1_avr7k")
+wheel_base = 65
+steering_angle = 20
+engine_power = 2000
+brake_power = 600
+friction = -40
+drag = -0.04
+slip_speed = 800
+traction_fast = 8.0
+traction_slow = 10.0
+collider = PackedVector2Array(48, -15, 48, 14, 40, 21, -11, 21, -15, 23, -33, 23, -42, 14, -42, 19, -48, 19, -48, -20, -42, -20, -42, -14, -33, -24, -15, -24, -12, -22, 40, -22)
+texture = ExtResource("2_8fqt2")

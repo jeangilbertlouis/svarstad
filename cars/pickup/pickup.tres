@@ -1,18 +1,18 @@
 [gd_resource type="Resource" script_class="CarProperties" load_steps=3 format=3 uid="uid://brcc725hprauf"]
 
-[ext_resource type="Script" path="res://cars/car_base/properties.gd" id="1_tg328"]
-[ext_resource type="Texture2D" uid="uid://dph2m1xh6gltg" path="res://cars/pickup/texture.tres" id="2_4owut"]
+[ext_resource type="Script" path="res://cars/car_base/properties.gd" id="1_id3vc"]
+[ext_resource type="Texture2D" uid="uid://dph2m1xh6gltg" path="res://cars/pickup/texture.tres" id="2_83db3"]
 
 [resource]
-script = ExtResource("1_tg328")
+script = ExtResource("1_id3vc")
 wheel_base = 70
 steering_angle = 35
 engine_power = 900
-brake_power = 450
+brake_power = 200
 friction = -55
 drag = -0.06
 slip_speed = 400
 traction_fast = 2.5
 traction_slow = 10.0
 collider = PackedVector2Array(-47, -19, -42, -23, 37, -23, 45, -17, 45, 16, 38, 23, -42, 23, -47, 20)
-texture = ExtResource("2_4owut")
+texture = ExtResource("2_83db3")

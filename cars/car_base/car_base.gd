@@ -41,8 +41,12 @@ func apply_friction(delta):
 
 	var friction_force = velocity * properties.friction * delta
 	var drag_force = velocity * velocity.length() * properties.drag * delta
+	var brake_force = Vector2.ZERO
 	
-	acceleration += drag_force + friction_force
+	if Input.is_action_pressed("brake"):
+		brake_force = velocity * -properties.brake_power * delta
+	
+	acceleration += drag_force + friction_force + brake_force
 
 func get_input():
 	if properties == null:
@@ -51,8 +55,8 @@ func get_input():
 	direction = turn * deg_to_rad(properties.steering_angle)
 	if Input.is_action_pressed("accelerate"):
 		acceleration = transform.x * properties.engine_power
-	if Input.is_action_pressed("brake"):
-		acceleration = transform.x * -properties.brake_power
+	if Input.is_action_pressed("reverse"):
+		acceleration = transform.x * -properties.engine_power
 
 func calculate_steering(delta):
 	if properties == null:

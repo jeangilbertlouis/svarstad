@@ -1,5 +1,7 @@
 extends Node2D
 
+signal trophy_collected
+
 var cars = [
 	preload("res://cars/sedan/sedan.tres"),
 	preload("res://cars/pickup/pickup.tres"),
@@ -26,4 +28,5 @@ func _on_ammo_body_entered(body):
 
 
 func _on_trophy_body_entered(body):
+	emit_signal("trophy_collected")
 	print("Trophy")

@@ -1,3 +1,7 @@
 [gd_scene format=3 uid="uid://dubkte5gtsakq"]
 
 [node name="weapon" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="."]

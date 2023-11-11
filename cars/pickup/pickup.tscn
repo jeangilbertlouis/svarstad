@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4kti02qbgjqp"]
+
+[ext_resource type="Script" path="res://cars/car_base/car_base.gd" id="1_82edm"]
+[ext_resource type="Resource" uid="uid://brcc725hprauf" path="res://cars/pickup/properties.tres" id="2_2tjy2"]
+[ext_resource type="Texture2D" uid="uid://dph2m1xh6gltg" path="res://cars/pickup/texture.tres" id="2_uxgxs"]
+[ext_resource type="Texture2D" uid="uid://vqlndd4qg511" path="res://assets/placeholders/ammo.jpg" id="4_tuwcp"]
+
+[node name="Pickup" type="CharacterBody2D"]
+script = ExtResource("1_82edm")
+properties = ExtResource("2_2tjy2")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-47, -19, -42, -23, 37, -23, 45, -17, 45, 16, 38, 23, -42, 23, -47, 20)
+
+[node name="Sprite" type="Sprite2D" parent="."]
+rotation = 1.5708
+texture = ExtResource("2_uxgxs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("4_tuwcp")

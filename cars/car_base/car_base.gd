@@ -5,14 +5,15 @@ class_name CarBase
 
 # state
 var acceleration = Vector2.ZERO
-var steer_direction
+var direction
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 	
 func _process(_delta):
-	$Sprite2D2.position = Vector2(properties.wheel_base / 2, 0)
+	$Sprite2D.position = Vector2(properties.wheel_base / 2, 0)
+#	pass
 
 func _physics_process(delta):
 	acceleration = Vector2.ZERO
@@ -25,13 +26,15 @@ func _physics_process(delta):
 func apply_friction(delta):
 	if acceleration == Vector2.ZERO and velocity.length() < 50:
 		velocity = Vector2.ZERO
+
 	var friction_force = velocity * properties.friction * delta
 	var drag_force = velocity * velocity.length() * properties.drag * delta
+	
 	acceleration += drag_force + friction_force
 
 func get_input():
 	var turn = Input.get_axis("steer_left", "steer_right")
-	steer_direction = turn * deg_to_rad(properties.steering_angle)
+	direction = turn * deg_to_rad(properties.steering_angle)
 	if Input.is_action_pressed("accelerate"):
 		acceleration = transform.x * properties.engine_power
 	if Input.is_action_pressed("brake"):
@@ -42,7 +45,7 @@ func calculate_steering(delta):
 	var front_wheel = position + transform.x * properties.wheel_base / 2.0
 	
 	rear_wheel += velocity * delta
-	front_wheel += velocity.rotated(steer_direction) * delta
+	front_wheel += velocity.rotated(direction) * delta
 	
 	var new_heading = (front_wheel - rear_wheel).normalized()
 	

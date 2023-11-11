@@ -1,11 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://bngrwqu3b2wjt"]
+[gd_scene load_steps=4 format=3 uid="uid://bngrwqu3b2wjt"]
 
 [ext_resource type="Texture2D" uid="uid://vqlndd4qg511" path="res://assets/placeholders/ammo.jpg" id="1_f77mv"]
+[ext_resource type="Script" path="res://powerups/ammo.gd" id="1_qguk7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_elpfw"]
 radius = 19.0263
 
 [node name="Ammo" type="Area2D"]
+collision_layer = 4
+script = ExtResource("1_qguk7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_elpfw")

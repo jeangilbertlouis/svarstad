@@ -5,8 +5,6 @@ extends TileMap
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#self.get_pattern(0, [Vector2i(0,0)])
-	
-
 	var maze = generate_maze(8, 8)
 	render_maze(maze)
 	
